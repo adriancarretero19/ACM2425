@@ -4,6 +4,7 @@ namespace ejercicioTelegrama
     {
         public Form1()
         {
+            InitializeComponent();
         }
 
         private void btnCalcularPrecio_Click(object sender, EventArgs e)
@@ -14,9 +15,13 @@ namespace ejercicioTelegrama
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (cbUrgente.Checked)
             {
                 tipoTelegrama = 'u';
+            }
+            if (cbOrdinario.Checked)
+            {
+                tipoTelegrama = 'o';
             }
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = textoTelegrama.Length;
