@@ -17,7 +17,11 @@ namespace ejercicioTelegrama
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (rOrdinario.Checked)
+            {
+                tipoTelegrama = 'o';
+            }
+            if (rUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }
